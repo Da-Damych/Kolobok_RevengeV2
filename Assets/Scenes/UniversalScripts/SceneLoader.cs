@@ -5,7 +5,7 @@ public class SceneLoader : MonoBehaviour
 {
     [SerializeField] private int sceneIndex = 1;
 
-    void LoadSceneIndex()
+    public void LoadSceneIndex()
     {
         if (sceneIndex < 0 || sceneIndex >= SceneManager.sceneCountInBuildSettings)
         {
