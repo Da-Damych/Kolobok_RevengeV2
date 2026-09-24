@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,7 +14,14 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField] private float runSpeed = 9f;
     [SerializeField] private float gravity = -9.81f;
     [SerializeField] private float jumpHeight = 1.5f;
+    [SerializeField] private Transform cameraTransform;
+    [SerializeField] private float rotationSpeed = 10f;
 
+    private void Start()
+    {
+        if (cameraTransform == null)
+            cameraTransform = Camera.main.transform;
+    }
 
     private void Awake()
     {
@@ -41,11 +49,20 @@ public class MovementPlayer : MonoBehaviour
 
     private void LateUpdate()
     {
+        Vector3 camForward = Vector3.ProjectOnPlane(cameraTransform.forward, Vector3.up).normalized;
+        Vector3 camRight = Vector3.ProjectOnPlane(cameraTransform.right, Vector3.up).normalized;
+        Vector3 moveDir = camForward * moveInput.y + camRight * moveInput.x;
+
         Vector3 direction = (transform.right * moveInput.x + transform.forward * moveInput.y).normalized;
 
-        float speed = isSprinting ? runSpeed : walkSpeed;
+        if (moveDir.sqrMagnitude > 0.01f)
+        {
+            float speed = isSprinting ? runSpeed : walkSpeed;
+            controller.Move(moveDir.normalized * speed * Time.deltaTime);
 
-        controller.Move(direction * speed * Time.deltaTime);
+            Quaternion targetRot = Quaternion.LookRotation(moveDir.normalized, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, rotationSpeed * Time.deltaTime);
+        }
 
         if (controller.isGrounded && verticalVelocity < 0)
             verticalVelocity += -2f;

@@ -3,18 +3,19 @@ using UnityEngine.InputSystem;
 
 public class CameraControle : MonoBehaviour
 {
-    private Transform cameraTransform;
-    private float sensitivity = 0.1f;
+    [SerializeField] private Transform target;
+    [SerializeField] private float sensitivity = 0.2f;
+    [SerializeField] private float distance = 4f;
+    [SerializeField] private float minPitch = -30f;
+    [SerializeField] private float maxPitch = 70f;
+
     private float pitch = 0f;
+    private float yaw = 0f;
 
 
     private void Start()
     {
-        if (cameraTransform == null)
-        {
-            cameraTransform = GetComponentInChildren<Camera>().transform;
-        }
-           
+          
 
 
         Cursor.lockState = CursorLockMode.Locked;
@@ -25,15 +26,13 @@ public class CameraControle : MonoBehaviour
     {
         Vector2 mouseDelta = Mouse.current.delta.ReadValue() * sensitivity;
 
-        transform.Rotate(0, mouseDelta.x, 0, Space.World);
-
+        yaw += mouseDelta.x;
         pitch -= mouseDelta.y;
-        pitch = Mathf.Clamp(pitch, -90f, 90);
-        cameraTransform.localRotation = Quaternion.Euler(pitch, 0, 0);
-    }
+        pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
 
-    private void OnLook(InputValue value)
-    {
-        Vector2 look = value.Get<Vector2>();
+        Quaternion rotation = Quaternion.Euler(pitch, yaw, 0f);
+        Vector3 offset = rotation * new Vector3(0f, 0f, -distance);
+        transform.position = target.position + offset;
+        transform.rotation = rotation;
     }
 }
