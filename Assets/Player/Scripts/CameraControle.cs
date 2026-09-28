@@ -11,12 +11,14 @@ public class CameraControle : MonoBehaviour
 
     private float pitch = 0f;
     private float yaw = 0f;
-
+    private Vector2 moveInput;
 
     private void Start()
     {
-          
-
+        if (target.transform == null)
+        {
+            target = Camera.main.transform;
+        }
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

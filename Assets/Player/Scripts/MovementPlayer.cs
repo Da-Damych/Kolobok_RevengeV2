@@ -45,10 +45,7 @@ public class MovementPlayer : MonoBehaviour
     {
         moveInput = controls.Gameplay.Move.ReadValue<Vector2>();
         isSprinting = controls.Gameplay.Sprint.IsPressed();
-    }
 
-    private void LateUpdate()
-    {
         Vector3 camForward = Vector3.ProjectOnPlane(cameraTransform.forward, Vector3.up).normalized;
         Vector3 camRight = Vector3.ProjectOnPlane(cameraTransform.right, Vector3.up).normalized;
         Vector3 moveDir = camForward * moveInput.y + camRight * moveInput.x;
