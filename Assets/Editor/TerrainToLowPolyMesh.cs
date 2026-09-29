@@ -9,15 +9,13 @@ public static class TerrainToLowPolyMesh
     // 33  - очень низкий
     // 65  - низкий
     // 129 - средний
-    // 257 - уже довольно много для мобилки
+    // 257 - выоский
     private const int TargetResolution = 129;
 
-    // Чтобы не превышать лимит 65535 вершин на меш,
-    // режем на чанки. Для мобильных лучше не превышать это значение.
+    // Режем на чанки (max 6635).
     private const int MaxVerticesPerMesh = 60000;
 
-    // Если нужна коллизия по мешу.
-    // Для слабых мобилок лучше делать отдельный ещё более простой коллизионный меш.
+    // Коллизия по мешу.
     private const bool AddMeshColliders = false;
 
     private const string OutputFolder = "Assets/TerrainMeshes";
@@ -60,7 +58,6 @@ public static class TerrainToLowPolyMesh
         // Например, TargetResolution = 129 даёт 128x128 ячеек.
         int cells = Mathf.Clamp(TargetResolution - 1, 2, data.heightmapResolution - 1);
 
-        // Размер чанка в ячейках, чтобы вершин было меньше лимита.
         int chunkCells = Mathf.FloorToInt(Mathf.Sqrt(MaxVerticesPerMesh)) - 1;
         chunkCells = Mathf.Clamp(chunkCells, 1, cells);
 
