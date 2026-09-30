@@ -23,7 +23,9 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/GameScenes/1_MainMenu/1_MainMenu.unity
   - m_enabled: 1
-    m_path: Assets/Scenes/GameScenes/2_Intro.unity
+    m_path: Assets/Scenes/GameScenes/2_Intro/2_Intro.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/GameScenes/3_Forest/3_Forest.unity
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
