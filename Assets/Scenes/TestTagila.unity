@@ -467,35 +467,13 @@ GameObject:
   - component: {fileID: 752431605}
   - component: {fileID: 752431604}
   - component: {fileID: 752431603}
-  - component: {fileID: 752431602}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!65 &752431602
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 752431601}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9.999999, y: 2.220446e-16, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!64 &752431603
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1011,6 +989,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2564280801895900396, guid: 6f94336ce6b72104596aa0f92c06f269, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2564280801895900396, guid: 6f94336ce6b72104596aa0f92c06f269, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2733319721579147552, guid: 6f94336ce6b72104596aa0f92c06f269, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.38936
@@ -1051,11 +1037,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3536562310612290791, guid: 6f94336ce6b72104596aa0f92c06f269, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536562310612290791, guid: 6f94336ce6b72104596aa0f92c06f269, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536562310612290791, guid: 6f94336ce6b72104596aa0f92c06f269, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3680610334750887378, guid: 6f94336ce6b72104596aa0f92c06f269, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4606314352870585990, guid: 6f94336ce6b72104596aa0f92c06f269, type: 3}
+      propertyPath: field of view
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 5659291011071350687, guid: 6f94336ce6b72104596aa0f92c06f269, type: 3}
+      propertyPath: collisionMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756374156087557199, guid: 6f94336ce6b72104596aa0f92c06f269, type: 3}
       propertyPath: collisionMask.m_Bits
       value: 64
       objectReference: {fileID: 0}
