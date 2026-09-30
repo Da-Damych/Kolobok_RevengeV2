@@ -9,8 +9,13 @@ public class CameraControle : MonoBehaviour
     [SerializeField] private float minPitch = -30f;
     [SerializeField] private float maxPitch = 70f;
 
+    [SerializeField] private LayerMask collisionMask;
+    [SerializeField] private float cameraRadius = 0.3f;
+    [SerializeField] private float wallPadding = 0.1f;
+
     private float pitch = 0f;
     private float yaw = 0f;
+    private float currectDistance;
 
 
     private void Start()
@@ -31,8 +36,26 @@ public class CameraControle : MonoBehaviour
         pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
 
         Quaternion rotation = Quaternion.Euler(pitch, yaw, 0f);
-        Vector3 offset = rotation * new Vector3(0f, 0f, -distance);
-        transform.position = target.position + offset;
+
+        Vector3 direction = rotation * Vector3.back;
+
+        RaycastHit hit;
+        bool blocked = Physics.SphereCast(
+            target.position,
+            cameraRadius,
+            direction,
+            out hit,
+            distance,
+            collisionMask,
+            QueryTriggerInteraction.Ignore);
+
+        float finalDistance = blocked ? hit.distance - wallPadding : distance;
+        finalDistance = Mathf.Max(finalDistance, 0.5f);
+
+        float smooth = (finalDistance < currectDistance) ? 20f : 5f;
+        currectDistance = Mathf.Lerp(currectDistance, finalDistance, smooth * Time.deltaTime);
+
+        transform.position = target.position + direction * currectDistance;
         transform.rotation = rotation;
     }
 }
