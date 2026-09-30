@@ -1,108 +1,15 @@
 fileFormatVersion: 2
-guid: 0860e6fc68e57ae48b5ae6e854f8f6b1
+guid: 2a94289b91dd3274692eb3274ab55b4b
 ModelImporter:
-  serializedVersion: 24600
-  internalIDToNameTable:
-  - first:
-      1: 100000
-    second: Box017
-  - first:
-      1: 100002
-    second: Box018
-  - first:
-      1: 100004
-    second: Box019
-  - first:
-      1: 100006
-    second: Box020
-  - first:
-      1: 100008
-    second: Box021
-  - first:
-      1: 100010
-    second: //RootNode
-  - first:
-      4: 400000
-    second: Box017
-  - first:
-      4: 400002
-    second: Box018
-  - first:
-      4: 400004
-    second: Box019
-  - first:
-      4: 400006
-    second: Box020
-  - first:
-      4: 400008
-    second: Box021
-  - first:
-      4: 400010
-    second: //RootNode
-  - first:
-      23: 2300000
-    second: Box017
-  - first:
-      23: 2300002
-    second: Box018
-  - first:
-      23: 2300004
-    second: Box019
-  - first:
-      23: 2300006
-    second: Box020
-  - first:
-      23: 2300008
-    second: Box021
-  - first:
-      23: 2300010
-    second: //RootNode
-  - first:
-      33: 3300000
-    second: Box017
-  - first:
-      33: 3300002
-    second: Box018
-  - first:
-      33: 3300004
-    second: Box019
-  - first:
-      33: 3300006
-    second: Box020
-  - first:
-      33: 3300008
-    second: Box021
-  - first:
-      33: 3300010
-    second: //RootNode
-  - first:
-      43: 4300000
-    second: Box017
-  - first:
-      43: 4300002
-    second: Box018
-  - first:
-      43: 4300004
-    second: Box019
-  - first:
-      43: 4300006
-    second: Box020
-  - first:
-      43: 4300008
-    second: Box021
-  - first:
-      43: 4300010
-    second: LowPolyGrass_02
-  - first:
-      95: 9500000
-    second: //RootNode
+  serializedVersion: 24300
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
-    materialImportMode: 0
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1
-    searchTexturesGlobally: 1
+    searchTexturesGlobally: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -124,7 +31,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -132,17 +39,15 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
-    preBakeConvexCollisionMesh: 0
-    preBakeTriangleCollisionMesh: 0
-    importPhysicalCameras: 0
-    importVisibility: 0
-    importBlendShapes: 0
-    importCameras: 0
-    importLights: 0
-    nodeNameCollisionStrategy: 0
-    fileIdsGeneration: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -155,14 +60,12 @@ ModelImporter:
     generateMeshLods: 0
     meshLodGenerationFlags: 0
     maximumMeshLod: -1
-    importUVs: -1
-    importVertexColors: 1
     meshOptimizationFlags: -1
-    indexFormat: 1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
-    secondaryUVMarginMethod: 0
+    secondaryUVMarginMethod: 1
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
@@ -172,13 +75,12 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-    normalCalculationMode: 0
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-    calculateBlendshapeNormalsDeltaFromImportedNormals: 1
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []
@@ -197,21 +99,13 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
-  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
-  importBlendShapeDeformPercent: 0
-  remapMaterialsIfMaterialImportModeIsNone: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 107400
-  packageName: FREE Skybox Extended Shader
-  packageVersion: 2.7.0
-  assetPath: Assets/Scenes/UniversalResources/SkyBoxes/Props/Meshes/LowPoly - Grass
-    B.FBX
-  uploadId: 991516
