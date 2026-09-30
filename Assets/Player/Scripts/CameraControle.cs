@@ -15,6 +15,10 @@ public class CameraControle : MonoBehaviour
     [SerializeField] private float wallPadding = 0.1f;
     private float currectDistance;
 
+    [SerializeField] private LayerMask collisionMask;
+    [SerializeField] private float cameraRadius = 0.3f;
+    [SerializeField] private float wallPadding = 0.1f;
+
     private float pitch = 0f;
     private float yaw = 0f;
     private Vector2 moveInput;
