@@ -8,6 +8,6 @@ git config --local merge.unityyamlmerge.recursive binary
 Linux
 git config --global merge.tool unityyamlmerge
 
-git config --global mergetool.unityyamlmerge.cmd '<ПУТЬ_К_UNITYYAMLMERGE> merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"'
+git config --global mergetool.unityyamlmerge.cmd '/home/user/Unity/Hub/Editor/6000.3.23f1/Editor/Data/Tools/UnityYAMLMerge merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"'
 
 git config --global mergetool.unityyamlmerge.trustExitCode false
