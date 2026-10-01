@@ -9,6 +9,7 @@ public class CameraControle : MonoBehaviour
     [SerializeField] private float distance = 4f;
     [SerializeField] private float minPitch = -30f;
     [SerializeField] private float maxPitch = 70f;
+    
     [SerializeField] private LayerMask collisionMask;
     [SerializeField] private float cameraRadius = 0.3f;
     [SerializeField] private float wallPadding = 0.1f;
