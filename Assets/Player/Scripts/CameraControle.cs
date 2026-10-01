@@ -15,6 +15,7 @@ public class CameraControle : MonoBehaviour
     [SerializeField] private float wallPadding = 0.1f;
     private float currectDistance;
 
+
     private float pitch = 0f;
     private float yaw = 0f;
     private Vector2 moveInput;
