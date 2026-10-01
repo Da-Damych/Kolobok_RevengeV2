@@ -1,3 +1,13 @@
+Windows
 git config --local merge.unityyamlmerge.driver "'C:/Program Files/Unity/Hub/Editor/6000.3.23f1/Editor/Data/Tools/UnityYamlMerge.exe' merge --fallback none -h -p --force %O %B %A %A"
+
 git config --local merge.unityyamlmerge.name "Unity SmartMerge (UnityYamlMerge)"
+
 git config --local merge.unityyamlmerge.recursive binary
+
+Linux
+git config --global merge.tool unityyamlmerge
+
+git config --global mergetool.unityyamlmerge.cmd '<ПУТЬ_К_UNITYYAMLMERGE> merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"'
+
+git config --global mergetool.unityyamlmerge.trustExitCode false
