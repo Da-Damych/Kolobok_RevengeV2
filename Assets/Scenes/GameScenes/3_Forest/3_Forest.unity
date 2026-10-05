@@ -1860,10 +1860,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7756374156087557199, guid: 6f94336ce6b72104596aa0f92c06f269, type: 3}
-      propertyPath: collisionMask.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

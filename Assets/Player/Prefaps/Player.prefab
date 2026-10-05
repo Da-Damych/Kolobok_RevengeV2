@@ -188,7 +188,7 @@ MonoBehaviour:
   maxPitch: 70
   collisionMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   cameraRadius: 0.3
   wallPadding: 0.1
 --- !u!1 &937359837237433056
@@ -216,7 +216,7 @@ Transform:
   m_GameObject: {fileID: 937359837237433056}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23834655, y: 0.000002367994, z: -1.75}
+  m_LocalPosition: {x: 0.23834655, y: 0.000002367994, z: 3.1173089}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
