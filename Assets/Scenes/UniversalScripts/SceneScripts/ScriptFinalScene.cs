@@ -19,7 +19,7 @@ public class ScriptFinalScene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!string.InNullOrEmpty(playerTag) && !other.CompareTag(playerTag))
+        if (!string.IsNullOrEmpty(playerTag) && !other.CompareTag(playerTag))
             return;
 
         ShowPotracheno();
